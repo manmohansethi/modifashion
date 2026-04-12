@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>MODI FASHION | Luxury Boutique</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <style>
         /* Essential: Fixes horizontal scroll and fits display perfectly */
@@ -28,7 +28,7 @@
             scroll-behavior: smooth;
             background: #0b0b0c;
             color: #eaeaea;
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
         }
 
         :root {
@@ -39,9 +39,9 @@
         }
 
         .glass-nav {
-            background: rgba(10, 10, 12, .85);
+            background: rgba(10, 10, 12, 0.85);
             backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(212, 175, 55, .2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         nav a {
@@ -56,7 +56,7 @@
             bottom: -4px;
             left: 0;
             background: var(--gold);
-            transition: .4s;
+            transition: 0.4s;
         }
 
         nav a:hover::after {
@@ -64,36 +64,39 @@
         }
 
         .video-overlay {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .2), rgba(0, 0, 0, .9));
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.9));
         }
 
         .product-hover {
-            transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             background: #111112;
-            border: 1px solid rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .product-hover:hover {
             transform: translateY(-10px);
-            border: 1px solid rgba(212, 175, 55, .4);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .6);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .btn-premium {
             background: linear-gradient(120deg, #d4af37, #f5e6b3);
             color: black;
-            letter-spacing: .08em;
-            transition: .3s;
+            letter-spacing: 0.08em;
+            transition: 0.3s;
         }
 
         .btn-premium:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, .4);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
         }
 
         .offer-card {
-            background: rgba(212, 175, 55, .1);
-            border: 1px dashed rgba(212, 175, 55, .4);
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px dashed rgba(212, 175, 55, 0.4);
             color: var(--gold-soft);
         }
 
@@ -113,7 +116,7 @@
         h1,
         h2,
         h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: "Playfair Display", serif;
         }
 
         /* Mobile Menu Animation */
@@ -126,55 +129,41 @@
             transform: translateX(0);
         }
 
-.no-scroll{
-position:fixed;
-width:100%;
-overflow:hidden;
-}
-
-
+        .no-scroll {
+            position: fixed;
+            width: 100%;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
-
     <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
         class="fixed bottom-6 right-6 z-[1000] flex items-center group">
-
         <!-- Tooltip -->
-        <span class="bg-white text-black text-xs font-semibold px-3 py-2 rounded-full shadow-lg
-               mr-3 whitespace-nowrap
-        
-               opacity-100
-               md:opacity-0 md:translate-x-2
-               md:group-hover:opacity-100 md:group-hover:translate-x-0
-        
-               transition-all duration-300">
+        <span
+            class="bg-white text-black text-xs font-semibold px-3 py-2 rounded-full shadow-lg mr-3 whitespace-nowrap opacity-100 md:opacity-0 md:translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
             Chat with us
         </span>
 
         <!-- WhatsApp Button -->
-        <div class="bg-[#25D366] p-4 rounded-full shadow-xl
-               hover:scale-110 transition-transform duration-300
-               flex items-center justify-center">
-
+        <div
+            class="bg-[#25D366] p-4 rounded-full shadow-xl hover:scale-110 transition-transform duration-300 flex items-center justify-center">
             <!-- Proper WhatsApp Logo -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
-
                 <path
                     d="M19.11 17.29c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.35-.81-.72-1.35-1.61-1.5-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.52-.45-.45-.61-.46-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.66 1.12 2.84.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.27.22-.63.22-1.16.16-1.27-.07-.11-.25-.18-.52-.32z" />
 
                 <path
                     d="M26.7 5.29C23.8 2.39 20.06.8 16 .8 7.73.8 1 7.53 1 15.8c0 2.78.73 5.49 2.13 7.88L1 31.2l7.73-2.02c2.32 1.26 4.93 1.92 7.59 1.92h.01c8.27 0 15-6.73 15-15 0-4.06-1.58-7.8-4.63-10.81zM16 28.3c-2.43 0-4.82-.65-6.91-1.88l-.49-.29-4.59 1.2 1.23-4.48-.32-.51c-1.32-2.1-2.02-4.53-2.02-7.04 0-7.18 5.84-13.02 13.02-13.02 3.48 0 6.74 1.36 9.2 3.81 2.46 2.46 3.81 5.72 3.81 9.2 0 7.18-5.84 13.01-13.02 13.01z" />
             </svg>
-
         </div>
     </a>
 
     <nav class="fixed w-full glass-nav text-white z-[100]">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
             <h1 class="text-3xl font-semibold tracking-tight">
-                MODI <span style="color:#d4af37">FASHION</span>
+                MODI <span style="color: #d4af37">FASHION</span>
             </h1>
 
             <div class="hidden md:flex space-x-10 text-sm lg:text-base uppercase tracking-[0.15em] font-bold">
@@ -183,16 +172,15 @@ overflow:hidden;
                 <a href="#products">Trends</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#contact">Contact</a>
-
             </div>
-            <button id="menu-btn" class="md:hidden text-white text-2xl">&#9776;</button>
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                &#9776;
+            </button>
         </div>
-
     </nav>
 
     <div id="mobile-menu"
         class="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center space-y-8 text-2xl uppercase tracking-widest">
-
         <button id="close-btn" class="absolute top-6 right-8 text-4xl text-white z-[210]">
             &times;
         </button>
@@ -204,13 +192,10 @@ overflow:hidden;
     </div>
 
     <section id="home" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-
         <!-- Video Player -->
         <video id="heroVideo" autoplay muted playsinline preload="auto"
             class="absolute inset-0 w-full h-full object-cover">
-
-            <source src="videos/fashion.mp4" type="video/mp4">
-
+            <source src="videos/fashion.mp4" type="video/mp4" />
         </video>
 
         <!-- Overlay -->
@@ -218,31 +203,26 @@ overflow:hidden;
 
         <!-- Content -->
         <div class="relative z-10 text-center px-6">
-
             <p class="tracking-[.5em] text-[10px] mb-4 font-bold uppercase text-[#d4af37]">
                 Handcrafted Luxury
             </p>
 
             <h1 class="text-4xl md:text-7xl font-semibold mb-6">
-                MODERN <br> ELEGANCE
+                MODERN <br />
+                ELEGANCE
             </h1>
 
             <a href="#products" class="btn-premium px-10 py-3 rounded-full text-xs font-bold">
                 EXPLORE SHOP
             </a>
-
         </div>
-
     </section>
 
-
-
     <script>
-
         const videos = [
             "videos/fashion.mp4",
             "videos/fashion2.mp4",
-            "videos/fashion3.mp4"
+            "videos/fashion3.mp4",
         ];
 
         const videoPlayer = document.getElementById("heroVideo");
@@ -250,7 +230,6 @@ overflow:hidden;
         let currentVideo = 0;
 
         videoPlayer.addEventListener("ended", () => {
-
             currentVideo++;
 
             if (currentVideo >= videos.length) {
@@ -260,17 +239,17 @@ overflow:hidden;
             videoPlayer.src = videos[currentVideo];
 
             videoPlayer.play();
-
         });
-
     </script>
 
     <section id="collection" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl mb-16 text-center tracking-widest uppercase">The Lookbook</h2>
+        <h2 class="text-3xl md:text-4xl mb-16 text-center tracking-widest uppercase">
+            The Lookbook
+        </h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="rounded-2xl overflow-hidden group relative h-[500px]" data-aos="fade-up">
                 <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"
-                    class="w-full h-full object-cover group-hover:scale-110 duration-1000">
+                    class="w-full h-full object-cover group-hover:scale-110 duration-1000" />
                 <div
                     class="absolute inset-0 bg-black/40 flex items-center justify-center transition-all group-hover:bg-black/20">
                     <a href="menswear.html"
@@ -281,7 +260,7 @@ overflow:hidden;
             </div>
             <div class="rounded-2xl overflow-hidden group relative h-[500px]" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc"
-                    class="w-full h-full object-cover group-hover:scale-110 duration-1000">
+                    class="w-full h-full object-cover group-hover:scale-110 duration-1000" />
                 <div
                     class="absolute inset-0 bg-black/40 flex items-center justify-center transition-all group-hover:bg-black/20">
                     <a href="womenswear.html"
@@ -292,7 +271,7 @@ overflow:hidden;
             </div>
             <div class="rounded-2xl overflow-hidden group relative h-[500px]" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7"
-                    class="w-full h-full object-cover group-hover:scale-110 duration-1000">
+                    class="w-full h-full object-cover group-hover:scale-110 duration-1000" />
                 <div
                     class="absolute inset-0 bg-black/40 flex items-center justify-center transition-all group-hover:bg-black/20">
                     <a href="kidswear.html"
@@ -306,56 +285,70 @@ overflow:hidden;
 
     <section id="products" class="py-24 bg-[#09090a] w-full">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl mb-16 text-center tracking-widest uppercase">Trending Now</h2>
+            <h2 class="text-3xl md:text-4xl mb-16 text-center tracking-widest uppercase">
+                Trending Now
+            </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up">
+                <div onclick="openProduct(1)" class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up">
                     <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
-                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg">
+                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg" />
                     <h3 class="text-lg mb-2 tracking-wide">Classic White Fit</h3>
-                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">just from</p>
-                    <p class="text-2xl font-bold mb-4" style="color:#d4af37">₹1,299</p>
-                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">Current
-                        Offer: Extra 10% Off</div>
-                    <button onclick="openProduct(1)"
+                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">
+                        just from
+                    </p>
+                    <p class="text-2xl font-bold mb-4" style="color: #d4af37">₹1,299</p>
+                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">
+                        Current Offer: Extra 10% Off
+                    </div>
+                    <button 
                         class="btn-premium w-full py-3 rounded-lg text-[10px] font-bold uppercase">
                         View Product
                     </button>
                 </div>
-                <div class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <div onclick="openProduct(2)" class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f"
-                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg">
+                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg" />
                     <h3 class="text-lg mb-2 tracking-wide">Azure Linen Shirt</h3>
-                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">just from</p>
-                    <p class="text-2xl font-bold mb-4" style="color:#d4af37">₹2,499</p>
-                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">Free
-                        Delivery Today</div>
-                    <button onclick="openProduct(2)"
+                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">
+                        just from
+                    </p>
+                    <p class="text-2xl font-bold mb-4" style="color: #d4af37">₹2,499</p>
+                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">
+                        Free Delivery Today
+                    </div>
+                    <button
                         class="btn-premium w-full py-3 rounded-lg text-[10px] font-bold uppercase">
                         View Product
                     </button>
                 </div>
-                <div class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                <div  onclick="openProduct(3)" class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://images.unsplash.com/photo-1593032465171-8e4c0d28c3fd"
-                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg">
+                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg" />
                     <h3 class="text-lg mb-2 tracking-wide">Indigo Slim Denim</h3>
-                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">just from</p>
-                    <p class="text-2xl font-bold mb-4" style="color:#d4af37">₹3,999</p>
-                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">Gift:
-                        Premium Belt</div>
-                    <button onclick="openProduct(3)"
+                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">
+                        just from
+                    </p>
+                    <p class="text-2xl font-bold mb-4" style="color: #d4af37">₹3,999</p>
+                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">
+                        Gift: Premium Belt
+                    </div>
+                    <button 
                         class="btn-premium w-full py-3 rounded-lg text-[10px] font-bold uppercase">
                         View Product
                     </button>
                 </div>
-                <div class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                <div onclick="openProduct(4)" class="product-hover p-4 rounded-2xl flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b"
-                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg">
+                        class="rounded-xl mb-6 h-72 w-full object-cover shadow-lg" />
                     <h3 class="text-lg mb-2 tracking-wide">Midnight Bomber</h3>
-                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">just from</p>
-                    <p class="text-2xl font-bold mb-4" style="color:#d4af37">₹5,499</p>
-                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">Limited
-                        Edition</div>
-                    <button onclick="openProduct(4)"
+                    <p class="opacity-50 text-[10px] uppercase tracking-widest mb-1">
+                        just from
+                    </p>
+                    <p class="text-2xl font-bold mb-4" style="color: #d4af37">₹5,499</p>
+                    <div class="offer-card p-3 rounded-lg text-[10px] uppercase font-bold text-center mb-6">
+                        Limited Edition
+                    </div>
+                    <button
                         class="btn-premium w-full py-3 rounded-lg text-[10px] font-bold uppercase">
                         View Product
                     </button>
@@ -364,33 +357,43 @@ overflow:hidden;
         </div>
     </section>
 
-
-
-
     <section id="reviews" class="py-28 bg-[#0b0b0c]">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl mb-20 font-semibold tracking-tight uppercase">Client Experience</h2>
+            <h2 class="text-3xl md:text-5xl mb-20 font-semibold tracking-tight uppercase">
+                Client Experience
+            </h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="product-hover p-10 rounded-3xl text-left" data-aos="fade-right">
-                    <p class="text-lg italic opacity-80 mb-8 font-light">"The fabric quality feels extremely premium.
-                        Perfect fitting and elegant design. One of the best boutique experiences I have had."</p>
-                    <p class="tracking-[0.3em] text-[10px] font-bold" style="color:#d4af37">ADITYA S.</p>
+                    <p class="text-lg italic opacity-80 mb-8 font-light">
+                        "The fabric quality feels extremely premium. Perfect fitting and
+                        elegant design. One of the best boutique experiences I have had."
+                    </p>
+                    <p class="tracking-[0.3em] text-[10px] font-bold" style="color: #d4af37">
+                        ADITYA S.
+                    </p>
                 </div>
                 <div class="product-hover p-10 rounded-3xl text-left" data-aos="fade-left">
-                    <p class="text-lg italic opacity-80 mb-8 font-light">"Classy collection that looks like an
-                        international luxury house. The attention to detail is truly impressive. Highly recommended."
+                    <p class="text-lg italic opacity-80 mb-8 font-light">
+                        "Classy collection that looks like an international luxury house.
+                        The attention to detail is truly impressive. Highly recommended."
                     </p>
-                    <p class="tracking-[0.3em] text-[10px] font-bold" style="color:#d4af37">PRIYA K.</p>
+                    <p class="tracking-[0.3em] text-[10px] font-bold" style="color: #d4af37">
+                        PRIYA K.
+                    </p>
                 </div>
             </div>
 
             <div class="mt-20 max-w-xl mx-auto bg-[#111112] p-10 rounded-3xl border border-white/5 shadow-2xl">
-                <h3 class="text-xl mb-8 tracking-widest uppercase">Leave Your Mark</h3>
+                <h3 class="text-xl mb-8 tracking-widest uppercase">
+                    Leave Your Mark
+                </h3>
                 <input type="text" placeholder="Your Name"
-                    class="w-full mb-4 p-4 rounded-xl bg-black border border-white/10 focus:border-[#d4af37] outline-none text-sm transition-all">
+                    class="w-full mb-4 p-4 rounded-xl bg-black border border-white/10 focus:border-[#d4af37] outline-none text-sm transition-all" />
                 <textarea rows="3" placeholder="Share your experience..."
                     class="w-full mb-6 p-4 rounded-xl bg-black border border-white/10 focus:border-[#d4af37] outline-none text-sm transition-all"></textarea>
-                <button class="btn-premium w-full py-4 rounded-xl text-xs font-bold uppercase">Post Review</button>
+                <button class="btn-premium w-full py-4 rounded-xl text-xs font-bold uppercase">
+                    Post Review
+                </button>
             </div>
         </div>
     </section>
@@ -398,7 +401,9 @@ overflow:hidden;
     <section id="contact" class="py-28 bg-black border-t border-white/5 w-full">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-5xl mb-10 tracking-tighter uppercase font-bold">Visit the Atelier</h2>
+                <h2 class="text-5xl mb-10 tracking-tighter uppercase font-bold">
+                    Visit the Atelier
+                </h2>
                 <div class="space-y-6 opacity-80 text-lg font-light tracking-wide">
                     <p>📍 45 Luxury Lane, New Delhi</p>
                     <p>📞 +91 98765 43210</p>
@@ -418,12 +423,18 @@ overflow:hidden;
     <footer class="bg-[#0b0b0c] text-white pt-24 pb-12 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 pb-20">
             <div>
-                <h2 class="text-2xl font-semibold mb-6">MODI <span style="color:#d4af37">FASHION</span></h2>
-                <p class="text-sm opacity-50 leading-relaxed font-light">Redefining luxury through timeless
-                    craftsmanship and contemporary design. Proudly serving the elite since 2019.</p>
+                <h2 class="text-2xl font-semibold mb-6">
+                    MODI <span style="color: #d4af37">FASHION</span>
+                </h2>
+                <p class="text-sm opacity-50 leading-relaxed font-light">
+                    Redefining luxury through timeless craftsmanship and contemporary
+                    design. Proudly serving the elite since 2019.
+                </p>
             </div>
             <div>
-                <h4 class="text-[10px] tracking-[0.4em] mb-8 uppercase font-bold text-[#d4af37]">Quick Navigation</h4>
+                <h4 class="text-[10px] tracking-[0.4em] mb-8 uppercase font-bold text-[#d4af37]">
+                    Quick Navigation
+                </h4>
                 <div class="flex flex-col space-y-4 text-xs tracking-widest uppercase">
                     <a href="#home" class="opacity-50 hover:opacity-100 transition">Home</a>
                     <a href="#collection" class="opacity-50 hover:opacity-100 transition">Collection</a>
@@ -432,7 +443,6 @@ overflow:hidden;
                 </div>
             </div>
             <div class="max-w-md w-full">
-
                 <h4 class="text-[11px] md:text-xs tracking-[0.35em] mb-4 md:mb-6 uppercase font-bold text-[#d4af37]">
                     Join the VIP List
                 </h4>
@@ -443,23 +453,14 @@ overflow:hidden;
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-0">
+                    <input type="email" placeholder="Email"
+                        class="bg-[#111] border border-white/10 px-4 py-3 md:py-4 w-full outline-none rounded-xl sm:rounded-l-xl sm:rounded-r-none text-sm focus:border-[#d4af37] transition" />
 
-                    <input type="email" placeholder="Email" class="bg-[#111] border border-white/10 px-4 py-3 md:py-4 
-                   w-full outline-none
-                   rounded-xl sm:rounded-l-xl sm:rounded-r-none
-                   text-sm
-                   focus:border-[#d4af37]
-                   transition">
-
-                    <button class="px-6 py-3 md:py-4
-                   rounded-xl sm:rounded-r-xl sm:rounded-l-none
-                   btn-premium transition
-                   text-sm font-semibold tracking-wide">
+                    <button
+                        class="px-6 py-3 md:py-4 rounded-xl sm:rounded-r-xl sm:rounded-l-none btn-premium transition text-sm font-semibold tracking-wide">
                         JOIN
                     </button>
-
                 </div>
-
             </div>
         </div>
         <div
@@ -473,63 +474,45 @@ overflow:hidden;
         AOS.init({ duration: 1000, once: true });
 
         // Mobile Menu Logic
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
 
-        const toggleMenu = () => mobileMenu.classList.toggle('active');
+        const toggleMenu = () => mobileMenu.classList.toggle("active");
 
-        menuBtn.addEventListener('click', toggleMenu);
-        closeBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        menuBtn.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", toggleMenu);
+        mobileLinks.forEach((link) => link.addEventListener("click", toggleMenu));
 
         // Dimension Check for viewport heights on mobile browsers
         const setHeight = () => {
-            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+            document.documentElement.style.setProperty(
+                "--vh",
+                `${window.innerHeight * 0.01}px`,
+            );
         };
-        window.addEventListener('resize', setHeight);
+        window.addEventListener("resize", setHeight);
         setHeight();
-
-
-
-
     </script>
 
-
-    <!-- PRODUCT POPUP -->
     <!-- PRODUCT POPUP -->
     <div id="productModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[999]">
-
         <div class="bg-[#111112] rounded-2xl max-w-4xl w-full p-6 relative">
-
-            <button onclick="closeProduct()" class="absolute top-4 right-4
-w-10 h-10
-rounded-full
-btn-premium
-flex items-center justify-center
-text-lg font-bold
-shadow-lg
-hover:scale-110
-transition">
-
+            <button onclick="closeProduct()"
+                class="absolute top-4 right-4 w-10 h-10 rounded-full btn-premium flex items-center justify-center text-lg font-bold shadow-lg hover:scale-110 transition">
                 ✕
             </button>
             <div class="grid md:grid-cols-2 gap-6">
-
                 <!-- IMAGE GALLERY -->
                 <div>
-
-                    <img id="modalMainImage" class="rounded-xl w-full h-80 object-cover mb-4">
+                    <img id="modalMainImage" class="rounded-xl w-full h-80 object-cover mb-4" />
 
                     <div id="imageGallery" class="flex gap-3"></div>
-
                 </div>
-
 
                 <!-- DETAILS -->
                 <div>
-
                     <h2 id="modalTitle" class="text-2xl font-semibold mb-3"></h2>
 
                     <p class="text-sm opacity-60 mb-1">
@@ -540,288 +523,236 @@ transition">
 
                     <p id="modalDiscount" class="text-green-400 text-sm mb-4"></p>
 
-
                     <p id="modalDesc" class="text-sm opacity-80 mb-6"></p>
-
 
                     <!-- SIZE SELECT -->
                     <h4 class="text-xs uppercase mb-2 tracking-widest">Select Size</h4>
 
                     <div id="sizeOptions" class="flex gap-3 mb-6">
-
                         <button class="sizeBtn border px-4 py-2 rounded-lg">S</button>
                         <button class="sizeBtn border px-4 py-2 rounded-lg">M</button>
                         <button class="sizeBtn border px-4 py-2 rounded-lg">L</button>
                         <button class="sizeBtn border px-4 py-2 rounded-lg">XL</button>
-
                     </div>
 
-
                     <button onclick="bookNow()" class="btn-premium px-6 py-3 rounded-lg text-xs font-bold w-full">
-
                         BOOK NOW
-
                     </button>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
- <script>
+    <script>
+        let selectedProduct = {};
+        let selectedSize = "";
+        let scrollY = 0;
 
-let selectedProduct = {};
-let selectedSize = "";
-let scrollY = 0;
+        /* PRODUCTS */
 
+        const products = {
+            1: {
+                title: "Classic White Fit",
+                price: "₹1,299",
+                mrp: "₹1,999",
+                discount: "35% OFF",
 
-/* PRODUCTS */
+                images: [
+                    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80",
+                ],
 
-const products = {
+                desc: "Premium cotton slim fit shirt.",
+            },
 
-1:{
-title:"Classic White Fit",
-price:"₹1,299",
-mrp:"₹1,999",
-discount:"35% OFF",
+            2: {
+                title: "Azure Linen Shirt",
+                price: "₹2,499",
+                mrp: "₹3,199",
+                discount: "20% OFF",
 
-images:[
-"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80"
-],
+                images: [
+                    "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80",
+                ],
 
-desc:"Premium cotton slim fit shirt."
-},
+                desc: "Breathable linen fabric.",
+            },
 
-2:{
-title:"Azure Linen Shirt",
-price:"₹2,499",
-mrp:"₹3,199",
-discount:"20% OFF",
+            3: {
+                title: "Indigo Slim Denim",
+                price: "₹3,999",
+                mrp: "₹5,199",
+                discount: "23% OFF",
 
-images:[
-"https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"
-],
+                images: [
+                    "https://images.unsplash.com/photo-1593032465171-8e4c0d28c3fd?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1584865288642-42078afe6942?auto=format&fit=crop&w=800&q=80",
+                ],
 
-desc:"Breathable linen fabric."
-},
+                desc: "Premium stretch denim.",
+            },
 
-3:{
-title:"Indigo Slim Denim",
-price:"₹3,999",
-mrp:"₹5,199",
-discount:"23% OFF",
+            4: {
+                title: "Midnight Bomber",
+                price: "₹5,499",
+                mrp: "₹6,999",
+                discount: "21% OFF",
 
-images:[
-"https://images.unsplash.com/photo-1593032465171-8e4c0d28c3fd?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1584865288642-42078afe6942?auto=format&fit=crop&w=800&q=80"
-],
+                images: [
+                    "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1520975867597-0af37a22e31e?auto=format&fit=crop&w=800&q=80",
+                ],
 
-desc:"Premium stretch denim."
-},
+                desc: "Luxury bomber jacket.",
+            },
+        };
 
-4:{
-title:"Midnight Bomber",
-price:"₹5,499",
-mrp:"₹6,999",
-discount:"21% OFF",
+        /* OPEN POPUP */
 
-images:[
-"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
-"https://images.unsplash.com/photo-1520975867597-0af37a22e31e?auto=format&fit=crop&w=800&q=80"
-],
+        function openProduct(id) {
+            if (!products[id]) return;
 
-desc:"Luxury bomber jacket."
-}
+            selectedProduct = products[id];
 
-};
+            const modal = document.getElementById("productModal");
 
+            /* SAVE SCROLL POSITION */
 
+            scrollY = window.scrollY;
 
-/* OPEN POPUP */
+            /* LOCK BACKGROUND SCROLL */
 
-function openProduct(id){
+            document.body.classList.add("no-scroll");
+            document.body.style.top = `-${scrollY}px`;
 
-if(!products[id]) return;
+            /* SHOW MODAL */
 
-selectedProduct = products[id];
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
 
-const modal = document.getElementById("productModal");
+            /* PUSH HISTORY */
 
-/* SAVE SCROLL POSITION */
+            history.pushState({ modal: true }, "");
 
-scrollY = window.scrollY;
+            /* LOAD PRODUCT DATA */
 
-/* LOCK BACKGROUND SCROLL */
+            document.getElementById("modalTitle").innerText = selectedProduct.title;
+            document.getElementById("modalPrice").innerText = selectedProduct.price;
+            document.getElementById("modalMRP").innerText = selectedProduct.mrp;
+            document.getElementById("modalDiscount").innerText =
+                selectedProduct.discount;
+            document.getElementById("modalDesc").innerText = selectedProduct.desc;
 
-document.body.classList.add("no-scroll");
-document.body.style.top = `-${scrollY}px`;
+            document.getElementById("modalMainImage").src =
+                selectedProduct.images[0];
 
-/* SHOW MODAL */
+            /* LOAD GALLERY */
 
-modal.classList.remove("hidden");
-modal.classList.add("flex");
+            let gallery = document.getElementById("imageGallery");
 
-/* PUSH HISTORY */
+            gallery.innerHTML = "";
 
-history.pushState({modal:true},"");
-
-
-/* LOAD PRODUCT DATA */
-
-document.getElementById("modalTitle").innerText = selectedProduct.title;
-document.getElementById("modalPrice").innerText = selectedProduct.price;
-document.getElementById("modalMRP").innerText = selectedProduct.mrp;
-document.getElementById("modalDiscount").innerText = selectedProduct.discount;
-document.getElementById("modalDesc").innerText = selectedProduct.desc;
-
-document.getElementById("modalMainImage").src = selectedProduct.images[0];
-
-
-/* LOAD GALLERY */
-
-let gallery = document.getElementById("imageGallery");
-
-gallery.innerHTML="";
-
-selectedProduct.images.forEach(img=>{
-
-gallery.innerHTML +=`
+            selectedProduct.images.forEach((img) => {
+                gallery.innerHTML += `
 <img src="${img}"
 onclick="changeImage('${img}')"
 class="h-16 w-16 object-cover rounded cursor-pointer border hover:border-[#d4af37]">
 `;
+            });
 
-});
+            selectedSize = "";
+        }
 
-selectedSize="";
+        /* CLOSE POPUP */
 
-}
+        function closeProduct() {
+            const modal = document.getElementById("productModal");
 
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
 
+            const y = Math.abs(parseInt(document.body.style.top || "0"));
 
-/* CLOSE POPUP */
+            document.body.classList.remove("no-scroll");
+            document.body.style.top = "";
 
-function closeProduct(){
+            window.scrollTo({
+                top: y,
+                behavior: "instant",
+            });
+        }
 
-const modal=document.getElementById("productModal");
+        /* BACK BUTTON FIX */
 
-modal.classList.add("hidden");
-modal.classList.remove("flex");
+        window.addEventListener("popstate", function () {
+            const modal = document.getElementById("productModal");
 
-const y = Math.abs(parseInt(document.body.style.top || "0"));
+            if (!modal.classList.contains("hidden")) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
 
-document.body.classList.remove("no-scroll");
-document.body.style.top = "";
+                /* get scroll position from body top */
 
-window.scrollTo({
-top: y,
-behavior: "instant"
-});
+                const y = Math.abs(parseInt(document.body.style.top || "0"));
 
-}
+                document.body.classList.remove("no-scroll");
+                document.body.style.top = "";
 
+                /* restore scroll instantly */
 
+                window.scrollTo({
+                    top: y,
+                    behavior: "instant",
+                });
+            }
+        });
 
-/* HANDLE BACK BUTTON */
+        /* CHANGE IMAGE */
 
-/* BACK BUTTON FIX */
+        function changeImage(img) {
+            document.getElementById("modalMainImage").src = img;
+        }
 
-window.addEventListener("popstate", function(){
+        /* SIZE SELECTION */
 
-const modal = document.getElementById("productModal");
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("sizeBtn")) {
+                document.querySelectorAll(".sizeBtn").forEach((btn) => {
+                    btn.classList.remove("bg-[#d4af37]", "text-black");
+                });
 
-if(!modal.classList.contains("hidden")){
+                e.target.classList.add("bg-[#d4af37]", "text-black");
 
-modal.classList.add("hidden");
-modal.classList.remove("flex");
+                selectedSize = e.target.innerText;
+            }
+        });
 
-/* get scroll position from body top */
+        /* WHATSAPP ORDER */
 
-const y = Math.abs(parseInt(document.body.style.top || "0"));
+        function bookNow() {
+            if (selectedSize == "") {
+                alert("Please select size");
+                return;
+            }
 
-document.body.classList.remove("no-scroll");
-document.body.style.top = "";
+            let number = "91XXXXXXXXXX";
 
-/* restore scroll instantly */
-
-window.scrollTo({
-top: y,
-behavior: "instant"
-});
-
-}
-
-});
-
-
-/* CHANGE IMAGE */
-
-function changeImage(img){
-
-document.getElementById("modalMainImage").src = img;
-
-}
-
-
-
-/* SIZE SELECTION */
-
-document.addEventListener("click",function(e){
-
-if(e.target.classList.contains("sizeBtn")){
-
-document.querySelectorAll(".sizeBtn").forEach(btn=>{
-
-btn.classList.remove("bg-[#d4af37]","text-black");
-
-});
-
-e.target.classList.add("bg-[#d4af37]","text-black");
-
-selectedSize=e.target.innerText;
-
-}
-
-});
-
-
-
-/* WHATSAPP ORDER */
-
-function bookNow(){
-
-if(selectedSize==""){
-
-alert("Please select size");
-return;
-
-}
-
-let number="91XXXXXXXXXX";
-
-let message=
-`Hello MODI FASHION,
+            let message = `Hello MODI FASHION,
 
 Product: ${selectedProduct.title}
 Price: ${selectedProduct.price}
 Size: ${selectedSize}`;
 
-let url=`https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+            let url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 
-window.open(url,"_blank");
-
-}
-
-</script>
+            window.open(url, "_blank");
+        }
+    </script>
 </body>
 
 </html>
