@@ -125,6 +125,14 @@
         #mobile-menu.active {
             transform: translateX(0);
         }
+
+.no-scroll{
+position:fixed;
+width:100%;
+overflow:hidden;
+}
+
+
     </style>
 </head>
 
@@ -563,246 +571,257 @@ transition">
 
     </div>
 
-    <script>
+ <script>
 
-        let selectedProduct = {};
-        let selectedSize = "";
-
-        /* PRODUCTS */
-
-        const products = {
-
-            1: {
-                title: "Classic White Fit",
-                price: "₹1,299",
-                mrp: "₹1,999",
-                discount: "35% OFF",
-
-                images: [
-                    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80"
-                ],
-
-                desc: "Premium cotton slim fit shirt with modern stitching."
-            },
-
-            2: {
-                title: "Azure Linen Shirt",
-                price: "₹2,499",
-                mrp: "₹3,199",
-                discount: "20% OFF",
-
-                images: [
-                    "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"
-                ],
-
-                desc: "Breathable linen fabric perfect for summer look."
-            },
-
-            3: {
-                title: "Indigo Slim Denim",
-                price: "₹3,999",
-                mrp: "₹5,199",
-                discount: "23% OFF",
-
-                images: [
-                    "https://images.unsplash.com/photo-1593032465171-8e4c0d28c3fd?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1584865288642-42078afe6942?auto=format&fit=crop&w=800&q=80"
-                ],
-
-                desc: "Premium stretch denim with modern slim fit."
-            },
-
-            4: {
-                title: "Midnight Bomber",
-                price: "₹5,499",
-                mrp: "₹6,999",
-                discount: "21% OFF",
-
-                images: [
-                    "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1520975867597-0af37a22e31e?auto=format&fit=crop&w=800&q=80"
-                ],
-
-                desc: "Luxury bomber jacket with premium finish."
-            }
-
-        };
+let selectedProduct = {};
+let selectedSize = "";
+let scrollY = 0;
 
 
+/* PRODUCTS */
 
-        /* OPEN POPUP */
+const products = {
 
-        function openProduct(id) {
+1:{
+title:"Classic White Fit",
+price:"₹1,299",
+mrp:"₹1,999",
+discount:"35% OFF",
 
-            if (!products[id]) return;
+images:[
+"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80"
+],
 
-            selectedProduct = products[id];
+desc:"Premium cotton slim fit shirt."
+},
 
-            const modal = document.getElementById("productModal");
+2:{
+title:"Azure Linen Shirt",
+price:"₹2,499",
+mrp:"₹3,199",
+discount:"20% OFF",
 
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
+images:[
+"https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"
+],
 
-            /* STOP BACKGROUND SCROLL */
-            document.documentElement.style.overflow = "hidden";
-            document.body.style.overflow = "hidden";
-            document.body.style.height = "100vh";
+desc:"Breathable linen fabric."
+},
 
-            /* BACK BUTTON SUPPORT */
-            history.pushState({ modal: true }, "");
+3:{
+title:"Indigo Slim Denim",
+price:"₹3,999",
+mrp:"₹5,199",
+discount:"23% OFF",
 
-            /* LOAD DATA */
+images:[
+"https://images.unsplash.com/photo-1593032465171-8e4c0d28c3fd?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1584865288642-42078afe6942?auto=format&fit=crop&w=800&q=80"
+],
 
-            document.getElementById("modalTitle").innerText = selectedProduct.title;
-            document.getElementById("modalPrice").innerText = selectedProduct.price;
-            document.getElementById("modalMRP").innerText = selectedProduct.mrp;
-            document.getElementById("modalDiscount").innerText = selectedProduct.discount;
-            document.getElementById("modalDesc").innerText = selectedProduct.desc;
+desc:"Premium stretch denim."
+},
 
-            /* MAIN IMAGE */
+4:{
+title:"Midnight Bomber",
+price:"₹5,499",
+mrp:"₹6,999",
+discount:"21% OFF",
 
-            document.getElementById("modalMainImage").src = selectedProduct.images[0];
+images:[
+"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1520975867597-0af37a22e31e?auto=format&fit=crop&w=800&q=80"
+],
 
-            /* GALLERY */
+desc:"Luxury bomber jacket."
+}
 
-            let gallery = document.getElementById("imageGallery");
+};
 
-            gallery.innerHTML = "";
 
-            selectedProduct.images.forEach(img => {
 
-                gallery.innerHTML += `
+/* OPEN POPUP */
 
+function openProduct(id){
+
+if(!products[id]) return;
+
+selectedProduct = products[id];
+
+const modal = document.getElementById("productModal");
+
+/* SAVE SCROLL POSITION */
+
+scrollY = window.scrollY;
+
+/* LOCK BACKGROUND SCROLL */
+
+document.body.classList.add("no-scroll");
+document.body.style.top = `-${scrollY}px`;
+
+/* SHOW MODAL */
+
+modal.classList.remove("hidden");
+modal.classList.add("flex");
+
+/* PUSH HISTORY */
+
+history.pushState({modal:true},"");
+
+
+/* LOAD PRODUCT DATA */
+
+document.getElementById("modalTitle").innerText = selectedProduct.title;
+document.getElementById("modalPrice").innerText = selectedProduct.price;
+document.getElementById("modalMRP").innerText = selectedProduct.mrp;
+document.getElementById("modalDiscount").innerText = selectedProduct.discount;
+document.getElementById("modalDesc").innerText = selectedProduct.desc;
+
+document.getElementById("modalMainImage").src = selectedProduct.images[0];
+
+
+/* LOAD GALLERY */
+
+let gallery = document.getElementById("imageGallery");
+
+gallery.innerHTML="";
+
+selectedProduct.images.forEach(img=>{
+
+gallery.innerHTML +=`
 <img src="${img}"
-
 onclick="changeImage('${img}')"
-
 class="h-16 w-16 object-cover rounded cursor-pointer border hover:border-[#d4af37]">
-
 `;
 
-            });
+});
 
-            selectedSize = "";
+selectedSize="";
 
-        }
-
-
-
-        /* CHANGE IMAGE */
-
-        function changeImage(img) {
-
-            document.getElementById("modalMainImage").src = img;
-
-        }
+}
 
 
 
-        /* SIZE SELECT */
+/* CLOSE POPUP */
 
-        document.addEventListener("click", function (e) {
+function closeProduct(){
 
-            if (e.target.classList.contains("sizeBtn")) {
+const modal=document.getElementById("productModal");
 
-                document.querySelectorAll(".sizeBtn").forEach(btn => {
+modal.classList.add("hidden");
+modal.classList.remove("flex");
 
-                    btn.classList.remove("bg-[#d4af37]", "text-black");
+const y = Math.abs(parseInt(document.body.style.top || "0"));
 
-                });
+document.body.classList.remove("no-scroll");
+document.body.style.top = "";
 
-                e.target.classList.add("bg-[#d4af37]", "text-black");
+window.scrollTo({
+top: y,
+behavior: "instant"
+});
 
-                selectedSize = e.target.innerText;
-
-            }
-
-        });
-
-
-
-        /* CLOSE POPUP */
-
-        function closeProduct() {
-
-            const modal = document.getElementById("productModal");
-
-            modal.classList.add("hidden");
-            modal.classList.remove("flex");
-
-            /* ENABLE SCROLL AGAIN */
-
-            document.documentElement.style.overflow = "auto";
-            document.body.style.overflow = "auto";
-            document.body.style.height = "auto";
-
-        }
+}
 
 
 
-        /* BACK BUTTON CLOSE */
+/* HANDLE BACK BUTTON */
 
-        window.addEventListener("popstate", function () {
+/* BACK BUTTON FIX */
 
-            const modal = document.getElementById("productModal");
+window.addEventListener("popstate", function(){
 
-            if (!modal.classList.contains("hidden")) {
+const modal = document.getElementById("productModal");
 
-                modal.classList.add("hidden");
-                modal.classList.remove("flex");
+if(!modal.classList.contains("hidden")){
 
-                document.documentElement.style.overflow = "auto";
-                document.body.style.overflow = "auto";
-                document.body.style.height = "auto";
+modal.classList.add("hidden");
+modal.classList.remove("flex");
 
-            }
+/* get scroll position from body top */
 
-        });
+const y = Math.abs(parseInt(document.body.style.top || "0"));
+
+document.body.classList.remove("no-scroll");
+document.body.style.top = "";
+
+/* restore scroll instantly */
+
+window.scrollTo({
+top: y,
+behavior: "instant"
+});
+
+}
+
+});
+
+
+/* CHANGE IMAGE */
+
+function changeImage(img){
+
+document.getElementById("modalMainImage").src = img;
+
+}
 
 
 
-        /* WHATSAPP BOOK */
+/* SIZE SELECTION */
 
-        function bookNow() {
+document.addEventListener("click",function(e){
 
-            if (selectedSize == "") {
+if(e.target.classList.contains("sizeBtn")){
 
-                alert("Please select size");
+document.querySelectorAll(".sizeBtn").forEach(btn=>{
 
-                return;
+btn.classList.remove("bg-[#d4af37]","text-black");
 
-            }
+});
 
-            let number = "91XXXXXXXXXX";
+e.target.classList.add("bg-[#d4af37]","text-black");
 
-            let message =
+selectedSize=e.target.innerText;
 
-                `Hello MODI FASHION,
+}
 
-I am interested in this product:
+});
 
-Product Name: ${selectedProduct.title}
+
+
+/* WHATSAPP ORDER */
+
+function bookNow(){
+
+if(selectedSize==""){
+
+alert("Please select size");
+return;
+
+}
+
+let number="91XXXXXXXXXX";
+
+let message=
+`Hello MODI FASHION,
+
+Product: ${selectedProduct.title}
 Price: ${selectedProduct.price}
-Size: ${selectedSize}
+Size: ${selectedSize}`;
 
-Please confirm availability.
-I would like to shop this item.
+let url=`https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 
-Thank you.`;
+window.open(url,"_blank");
 
-            let url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}
 
-            window.open(url, "_blank");
-
-        }
-
-    </script>
+</script>
 </body>
 
 </html>
