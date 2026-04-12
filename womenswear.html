@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Woman Lookbook | MODI FASHION</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #0b0b0c;
+            color: #eaeaea;
+            font-family: "Inter", sans-serif;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-soft: #f5e6b3;
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        nav a {
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background: var(--gold);
+            transition: 0.4s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .product-hover {
+            transition: 0.4s;
+            background: #111112;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .product-hover:hover {
+            transform: translateY(-10px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .btn-premium {
+            background: linear-gradient(120deg, #d4af37, #f5e6b3);
+            color: black;
+            letter-spacing: 0.08em;
+            transition: 0.3s;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        #mobile-menu {
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(100%);
+        }
+
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+        }
+    </style>
+</head>
+
+<body>
+
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+        class="fixed bottom-6 right-6 z-[1000] flex items-center group">
+
+        <!-- Tooltip -->
+        <span class="bg-white text-black text-xs font-semibold px-3 py-2 rounded-full shadow-lg
+               mr-3 whitespace-nowrap
+        
+               opacity-100
+               md:opacity-0 md:translate-x-2
+               md:group-hover:opacity-100 md:group-hover:translate-x-0
+        
+               transition-all duration-300">
+            Chat with us
+        </span>
+
+        <!-- WhatsApp Button -->
+        <div class="bg-[#25D366] p-4 rounded-full shadow-xl
+               hover:scale-110 transition-transform duration-300
+               flex items-center justify-center">
+
+            <!-- Proper WhatsApp Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+
+                <path
+                    d="M19.11 17.29c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.35-.81-.72-1.35-1.61-1.5-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.52-.45-.45-.61-.46-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.66 1.12 2.84.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.27.22-.63.22-1.16.16-1.27-.07-.11-.25-.18-.52-.32z" />
+
+                <path
+                    d="M26.7 5.29C23.8 2.39 20.06.8 16 .8 7.73.8 1 7.53 1 15.8c0 2.78.73 5.49 2.13 7.88L1 31.2l7.73-2.02c2.32 1.26 4.93 1.92 7.59 1.92h.01c8.27 0 15-6.73 15-15 0-4.06-1.58-7.8-4.63-10.81zM16 28.3c-2.43 0-4.82-.65-6.91-1.88l-.49-.29-4.59 1.2 1.23-4.48-.32-.51c-1.32-2.1-2.02-4.53-2.02-7.04 0-7.18 5.84-13.02 13.02-13.02 3.48 0 6.74 1.36 9.2 3.81 2.46 2.46 3.81 5.72 3.81 9.2 0 7.18-5.84 13.01-13.02 13.01z" />
+            </svg>
+
+        </div>
+    </a>
+
+    <!-- HEADER -->
+
+    <nav class="fixed w-full glass-nav text-white z-[100]">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+            <h1 class="text-2xl font-semibold tracking-tight">
+                MODI <span style="color: #d4af37">FASHION</span>
+            </h1>
+
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <a href="index.html#home">Home</a>
+
+                <a href="index.html#collection">Collection</a>
+
+                <a href="index.html#products">Trends</a>
+
+                <a href="index.html#reviews">Reviews</a>
+
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black z-[90] flex flex-col items-center justify-center space-y-8 text-2xl uppercase tracking-widest">
+        <button id="close-btn" class="absolute top-6 right-8 text-4xl">×</button>
+
+        <a href="index.html#home" class="mobile-link">Home</a>
+
+        <a href="index.html#collection" class="mobile-link">Collection</a>
+
+        <a href="index.html#products" class="mobile-link">Trends</a>
+
+        <a href="index.html#reviews" class="mobile-link">Reviews</a>
+
+        <a href="index.html#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- PAGE CONTENT -->
+
+    <!-- HERO LOOKBOOK -->
+
+<section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+
+    <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc"
+        class="absolute inset-0 w-full h-full object-cover opacity-50" />
+
+    <div class="relative z-10 text-center">
+
+        <h2 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase"
+            data-aos="zoom-in">
+
+            The Modern Woman
+
+        </h2>
+
+        <p class="text-[#d4af37] tracking-[0.5em] text-xs mt-4">
+            ELEGANCE IN EVERY SEASON
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- LOOKBOOK GALLERY -->
+
+<section id="gallery-women" class="py-24 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl tracking-widest uppercase text-center mb-16">
+        Womenswear Collection
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- T-Shirts -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">T-Shirts</h3>
+            <p class="text-xs opacity-50 mt-2">Comfortable casual t-shirts.</p>
+        </div>
+
+        <!-- Shirts & Tops -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Shirts & Tops</h3>
+            <p class="text-xs opacity-50 mt-2">Stylish tops & shirts collection.</p>
+        </div>
+
+        <!-- Jeans -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Jeans</h3>
+            <p class="text-xs opacity-50 mt-2">Denim jeans in trendy fits.</p>
+        </div>
+
+        <!-- Trousers -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Trousers & Pants</h3>
+            <p class="text-xs opacity-50 mt-2">Formal & casual trousers.</p>
+        </div>
+
+        <!-- Dresses -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Dresses</h3>
+            <p class="text-xs opacity-50 mt-2">Casual & party dresses.</p>
+        </div>
+
+        <!-- Sarees -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Sarees</h3>
+            <p class="text-xs opacity-50 mt-2">Traditional & designer sarees.</p>
+        </div>
+
+        <!-- Ethnic Wear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1622445275576-721325763afe"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Ethnic Wear</h3>
+            <p class="text-xs opacity-50 mt-2">Kurtis, suits & lehenga sets.</p>
+        </div>
+
+        <!-- Party Wear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Party Wear</h3>
+            <p class="text-xs opacity-50 mt-2">Trendy outfits for parties.</p>
+        </div>
+
+        <!-- Wedding Wear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Wedding Wear</h3>
+            <p class="text-xs opacity-50 mt-2">Bridal & wedding collection.</p>
+        </div>
+
+        <!-- Sportswear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Sportswear</h3>
+            <p class="text-xs opacity-50 mt-2">Activewear & gym clothing.</p>
+        </div>
+
+        <!-- Innerwear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Innerwear</h3>
+            <p class="text-xs opacity-50 mt-2">Comfortable lingerie collection.</p>
+        </div>
+
+        <!-- Nightwear -->
+        <div class="product-hover p-4 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157"
+                class="rounded-xl mb-6 h-[420px] w-full object-cover" />
+            <h3 class="text-lg tracking-wide">Nightwear</h3>
+            <p class="text-xs opacity-50 mt-2">Soft & stylish sleepwear.</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- FEATURE LOOK -->
+
+    <section class="bg-[#111] py-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1594932224010-3a1399684c37"
+                    class="rounded-3xl shadow-2xl" />
+            </div>
+
+            <div class="flex-1" data-aos="fade-left">
+                <span class="text-[#d4af37] text-xs font-bold tracking-widest uppercase">
+                    Featured Look
+                </span>
+
+                <h2 class="text-4xl md:text-5xl my-6">Modern Tailored Suit</h2>
+
+                <p class="text-lg opacity-70 mb-8 leading-relaxed">
+                    A refined expression of craftsmanship combining structured tailoring
+                    with modern silhouette for a confident presence.
+                </p>
+
+                <p class="text-sm opacity-50">
+                    Available in multiple fabrics and colour tones in-store.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STYLE GUIDE -->
+
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl tracking-widest uppercase mb-12">STYLE GUIDE</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-10 border border-white/5 rounded-3xl hover:bg-white/[0.02] transition">
+                <h4 class="text-[#d4af37] mb-4 text-sm font-bold uppercase tracking-widest">
+                    01. Perfect Fit
+                </h4>
+
+                <p class="text-sm opacity-60">
+                    A well-fitted garment enhances posture and creates a refined
+                    silhouette suitable for formal and casual wear.
+                </p>
+            </div>
+
+            <div class="p-10 border border-white/5 rounded-3xl hover:bg-white/[0.02] transition">
+                <h4 class="text-[#d4af37] mb-4 text-sm font-bold uppercase tracking-widest">
+                    02. Fabric Selection
+                </h4>
+
+                <p class="text-sm opacity-60">
+                    Premium fabrics ensure comfort, durability and a sophisticated
+                    finish that elevates overall appearance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-[#0b0b0c] text-white pt-24 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 pb-20">
+            <div>
+                <h2 class="text-2xl font-semibold mb-6">MODI <span style="color:#d4af37">FASHION</span></h2>
+                <p class="text-sm opacity-50 leading-relaxed font-light">Redefining luxury through timeless
+                    craftsmanship and contemporary design. Proudly serving the elite since 2019.</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] tracking-[0.4em] mb-8 uppercase font-bold text-[#d4af37]">Quick Navigation</h4>
+                <div class="flex flex-col space-y-4 text-xs tracking-widest uppercase">
+    <a href="index.html#home" class="opacity-50 hover:opacity-100 transition">Home</a>
+    <a href="index.html#collection" class="opacity-50 hover:opacity-100 transition">Collection</a>
+    <a href="index.html#products" class="opacity-50 hover:opacity-100 transition">Trends</a>
+    <a href="index.html#reviews" class="opacity-50 hover:opacity-100 transition">Reviews</a>
+    <a href="index.html#contact" class="opacity-50 hover:opacity-100 transition">Contact</a>
+                </div>
+            </div>
+            <div class="max-w-md w-full">
+
+                <h4 class="text-[11px] md:text-xs tracking-[0.35em] mb-4 md:mb-6 uppercase font-bold text-[#d4af37]">
+                    Join the VIP List
+                </h4>
+
+                <p
+                    class="text-[11px] md:text-xs opacity-60 mb-4 md:mb-6 font-light uppercase tracking-tight leading-relaxed">
+                    Early access to seasonal releases and events.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-0">
+
+                    <input type="email" placeholder="Email" class="bg-[#111] border border-white/10 px-4 py-3 md:py-4 
+                   w-full outline-none
+                   rounded-xl sm:rounded-l-xl sm:rounded-r-none
+                   text-sm
+                   focus:border-[#d4af37]
+                   transition">
+
+                    <button class="px-6 py-3 md:py-4
+                   rounded-xl sm:rounded-r-xl sm:rounded-l-none
+                   btn-premium transition
+                   text-sm font-semibold tracking-wide">
+                        JOIN
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+        <div
+            class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center opacity-30 text-[9px] tracking-[0.6em] uppercase">
+            <p>© 2026 MODI FASHION ATELIER</p>
+            <p class="mt-4 md:mt-0 italic">Handcrafted in India</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        menuBtn.onclick = () => {
+            mobileMenu.classList.toggle("active");
+        };
+
+        closeBtn.onclick = () => {
+            mobileMenu.classList.toggle("active");
+        };
+
+        mobileLinks.forEach((link) => {
+            link.onclick = () => {
+                mobileMenu.classList.toggle("active");
+            };
+        });
+    </script>
+</body>
+
+</html>
